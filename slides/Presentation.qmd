@@ -1008,4 +1008,4 @@ Open-space homing, 42 ants, 10 Hz. Median over the 42 ants; brackets give the 95
 
 - [Figure gallery](https://godcreator333.github.io/Hierarchical_RL_Research/){target="_blank"}
 - [Code and manifest](https://github.com/GODCREATOR333/Hierarchical_RL_Research){target="_blank"}
-- [Full sigmoid derivation (PDF)](https://godcreator333.github.io/Hierarchical_RL_Research/slides/derivations/soft_bang_bang.pdf){target="_blank"}
+- [All derivations (PDF)](https://godcreator333.github.io/Hierarchical_RL_Research/slides/derivations/){target="_blank"}
