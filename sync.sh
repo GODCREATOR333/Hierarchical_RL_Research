@@ -24,6 +24,7 @@ rsync -a --delete "$SRC/derivations/" "$DST/slides/derivations/"
 # ---- figures (both places get the same set) ----
 rsync -a --delete "$SRC/figures/" "$DST/figures/"
 rsync -a --delete "$SRC/figures/" "$DST/gallery/"
+rsync -a --delete "$SRC/figures/" "$DST/slides/figures/"
 
 echo "→ sync complete. Files now in $DST:"
 echo "    slides/       $(ls -1 "$DST/slides"      | wc -l) entries"
