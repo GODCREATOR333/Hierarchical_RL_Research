@@ -565,8 +565,8 @@ Three observations that hold in every density panel.
 <!-- Each figure: survival probability versus time, one curve per gamma, colour = gamma (same colormap as the maps).
      TODO(user): fix the five (alpha, beta) pairs; mark them on the gamma* map. -->
 
-     
-<!-- [All regimes and FPT histograms →](https://USER.github.io/REPO/gallery/survival/){.small} --> -->
+
+<!-- [All regimes and FPT histograms →](https://USER.github.io/REPO/gallery/survival/){.small} -->
 
 ## Mechanism: sticking versus diffusive delay
 

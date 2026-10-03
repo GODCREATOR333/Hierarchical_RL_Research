@@ -3,7 +3,8 @@ set -euo pipefail
 
 SRC="$HOME/HARI_UBUNTU_HOME/Shared Files/Quarto_reveal/Presentation"
 DST="$HOME/HARI_UBUNTU_HOME/Shared Files/Hierarchical_RL_GH"
-
+echo "→ rendering Presentation.qmd"
+(cd "$SRC" && quarto render Presentation.qmd)
 echo "→ source: $SRC"
 echo "→ dest:   $DST"
 
