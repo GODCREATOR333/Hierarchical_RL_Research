@@ -10,6 +10,8 @@ echo "→ dest:   $DST"
 
 # ---- slides sources ----
 mkdir -p "$DST/slides/data" "$DST/slides/derivations"
+mkdir -p "$DST/code" "$DST/slides"
+cp "$SRC/derivations/index.html" "$DST/slides/derivations/" 2>/dev/null || true
 
 cp -f "$SRC/Presentation.qmd"  "$DST/slides/"
 cp -f "$SRC/Presentation.html" "$DST/slides/"
@@ -20,7 +22,7 @@ cp -f "$SRC/data/papers.csv"   "$DST/slides/data/"
 rsync -a --delete "$SRC/Presentation_files/" "$DST/slides/Presentation_files/"
 
 # ---- all derivation PDFs ----
-rsync -a --delete "$SRC/derivations/" "$DST/slides/derivations/"
+rsync -a "$SRC/derivations/" "$DST/slides/derivations/"
 
 # ---- figures (both places get the same set) ----
 rsync -a --delete "$SRC/figures/" "$DST/figures/"
