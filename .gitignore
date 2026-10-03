@@ -21,3 +21,5 @@ __pycache__/
 # Compiled
 sweep
 *.o
+Presentation.quarto_ipynb
+Presentation_files/
