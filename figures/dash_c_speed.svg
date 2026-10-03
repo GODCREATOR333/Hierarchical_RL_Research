@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#fbfaf4" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="400" y="240" text-anchor="middle" font-family="sans-serif"
+        font-size="28" fill="#2d6a4f">[ dash_c_speed ]</text>
+  <text x="400" y="280" text-anchor="middle" font-family="sans-serif"
+        font-size="16" fill="#6b7280">placeholder — replace with real figure</text>
+</svg>

@@ -1,0 +1,8 @@
+mode=fine
+density=P0200
+source=../../data_jax_u8/N16_P0200_test_solvable_random.npy
+mazes=1000
+agents_per_maze=30
+max_steps=200
+seed=13577763696010591662
+wall_fraction=0.19559

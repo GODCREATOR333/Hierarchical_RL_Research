@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Quarto
+.quarto/
+_site/
+*.quarto_ipynb
+
+# Large / intermediate
+data/results_coarse/
+*.npy
+*.h5
+*.zarr
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Compiled
+sweep
+*.o
