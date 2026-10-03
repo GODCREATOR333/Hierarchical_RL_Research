@@ -1,50 +1,115 @@
 <!doctype html>
-<html><head>
+<html lang="en"><head>
 <meta charset="utf-8">
-<title>Hierarchical navigation — figures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hierarchical navigation — figure gallery</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 900px;
-         margin: 3em auto; padding: 0 1em; color: #1f2a1f; background: #fbfaf4; }
-  h1 { color: #1b4332; border-bottom: 3px solid #2d6a4f; padding-bottom: .2em; }
-  h2 { color: #2d6a4f; margin-top: 2em; }
-  a  { color: #2d6a4f; }
-  ul { line-height: 1.7; }
+  :root { --ink:#1f2a1f; --forest:#1b4332; --leaf:#2d6a4f;
+          --moss:#74c69d; --sage:#95d5b2; --cream:#fbfaf4; --rust:#b3261e; }
+  body { font-family: "Source Sans 3", system-ui, sans-serif;
+         max-width: 1000px; margin: 3em auto; padding: 0 1.2em;
+         color: var(--ink); background: var(--cream); line-height: 1.6; }
+  h1 { color: var(--forest); border-bottom: 3px solid var(--leaf);
+       padding-bottom: .25em; display: flex; align-items: center; gap: .5em; }
+  h2 { color: var(--leaf); margin-top: 2.4em; display: flex;
+       align-items: center; gap: .5em; }
+  a  { color: var(--leaf); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+               gap: 1em; margin: 1em 0 2em; }
+  .card { background: #fff; border: 1px solid var(--moss);
+          border-radius: 10px; padding: 1em; text-align: center;
+          transition: box-shadow .15s; }
+  .card:hover { box-shadow: 0 4px 14px rgba(45,106,79,.15); }
+  .card a { font-weight: 600; }
+  .card p { font-size: .85em; color: #556; margin: .4em 0 0; }
+  ul { padding-left: 1.2em; }
+  li { margin: .35em 0; }
+  .icon { width: 1.1em; height: 1.1em; vertical-align: -0.15em;
+          fill: var(--leaf); }
+  .footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid var(--moss);
+            font-size: .85em; color: #667; text-align: center; }
 </style>
 </head><body>
-<h1>Hierarchical navigation — figure gallery</h1>
 
-<h2>Optimal static γ*</h2>
-<ul>
-  <li><a href="figures/gamma_star_rho10.svg">Density 10%</a></li>
-  <li><a href="figures/gamma_star_rho20.svg">Density 20%</a></li>
-  <li><a href="figures/gamma_star_rho30.svg">Density 30%</a></li>
-  <li><a href="figures/gamma_star_rho40.svg">Density 40%</a></li>
-</ul>
+<h1>
+  <svg class="icon" viewBox="0 0 24 24" style="width:1.4em;height:1.4em">
+    <ellipse cx="12" cy="7" rx="2.2" ry="2.8"/>
+    <ellipse cx="12" cy="13.5" rx="1.6" ry="2.2"/>
+    <ellipse cx="12" cy="18.5" rx="1.4" ry="1.8"/>
+    <path d="M10 6 Q6 4 4 2 M14 6 Q18 4 20 2 M10 13 Q5 13 3 11 M14 13 Q19 13 21 11
+             M10 18 Q6 19 4 21 M14 18 Q18 19 20 21"
+          stroke="currentColor" stroke-width="1.1" fill="none"/>
+  </svg>
+  Hierarchical navigation — figure gallery
+</h1>
 
-<h2>Fokker-Planck modes</h2>
-<ul>
-  <li><a href="figures/fp_modes.svg">Geo high β / geo low β / ego</a></li>
-</ul>
+<h2>
+  <svg class="icon" viewBox="0 0 24 24" style="width:1.2em;height:1.2em">
+    <circle cx="12" cy="12" r="6"/>
+    <path d="M6 12 H2 M18 12 H22 M12 6 V2 M12 18 V22"
+          stroke="currentColor" stroke-width="1.3" fill="none"/>
+    <circle cx="12" cy="12" r="2" fill="var(--rust)"/>
+  </svg>
+  Optimal static γ*
+</h2>
+<div class="card-grid">
+  <div class="card"><a href="figures/gamma_star_rho10.svg">Density 10%</a><p>Best γ* over (α, β)</p></div>
+  <div class="card"><a href="figures/gamma_star_rho20.svg">Density 20%</a><p>Best γ* over (α, β)</p></div>
+  <div class="card"><a href="figures/gamma_star_rho30.svg">Density 30%</a><p>Best γ* over (α, β)</p></div>
+  <div class="card"><a href="figures/gamma_star_rho40.svg">Density 40%</a><p>Best γ* over (α, β)</p></div>
+</div>
 
-<h2>Biological grounding</h2>
-<ul>
-  <li><a href="figures/overlay_all_ants.svg">Overlaid homing tracks</a></li>
-  <li><a href="figures/dash_behavioral_1.svg">Behavioural dashboard I</a></li>
-  <li><a href="figures/dash_behavioral_2.svg">Behavioural dashboard II</a></li>
-  <li><a href="figures/diag_residuals.svg">Residual diagnostics I</a></li>
-  <li><a href="figures/diag_diffusion.svg">Residual diagnostics II</a></li>
-  <li><a href="figures/residual_qq.svg">Q–Q plots</a></li>
-</ul>
+<h2>
+  <svg class="icon" viewBox="0 0 24 24" style="width:1.2em;height:1.2em">
+    <path d="M4 20 L12 4 L20 20 Z" stroke="currentColor" stroke-width="1.3"
+          fill="none"/>
+    <circle cx="12" cy="14" r="2.2" fill="var(--leaf)"/>
+  </svg>
+  Fokker-Planck modes
+</h2>
+<div class="card-grid">
+  <div class="card"><a href="figures/fp_modes.svg">Geo high β / geo low β / ego</a><p>Probability cloud on an empty grid</p></div>
+</div>
+
+<h2>
+  <svg class="icon" viewBox="0 0 24 24" style="width:1.2em;height:1.2em">
+    <ellipse cx="12" cy="7" rx="2.2" ry="2.8"/>
+    <ellipse cx="12" cy="13.5" rx="1.6" ry="2.2"/>
+    <ellipse cx="12" cy="18.5" rx="1.4" ry="1.8"/>
+    <path d="M10 6 Q6 4 4 2 M14 6 Q18 4 20 2 M10 13 Q5 13 3 11 M14 13 Q19 13 21 11
+             M10 18 Q6 19 4 21 M14 18 Q18 19 20 21"
+          stroke="currentColor" stroke-width="1.1" fill="none"/>
+  </svg>
+  Biological grounding
+</h2>
+<div class="card-grid">
+  <div class="card"><a href="figures/overlay_all_ants.svg">Overlaid homing tracks</a></div>
+  <div class="card"><a href="figures/dash_behavioral_1.svg">Behavioural dashboard I</a></div>
+  <div class="card"><a href="figures/dash_behavioral_2.svg">Behavioural dashboard II</a></div>
+  <div class="card"><a href="figures/diag_residuals.svg">Residual diagnostics I</a></div>
+  <div class="card"><a href="figures/diag_diffusion.svg">Residual diagnostics II</a></div>
+  <div class="card"><a href="figures/residual_qq.svg">Q–Q plots</a></div>
+</div>
 
 <h2>Code and derivations</h2>
 <ul>
   <li><a href="code/">Sweep + plotting scripts</a></li>
   <li><a href="slides/Presentation.html">Full presentation (HTML)</a></li>
-  <li><a href="slides/Presentation.qmd">Presentation source (Quarto)</a></li>
-  <li><a href="slides/data/papers.csv">Reference papers (CSV)</a></li>
+  <li><a href="slides/">Presentation source and data</a></li>
 </ul>
 
-<h2>Detailed derivations</h2>
+<h2>
+  <svg class="icon" viewBox="0 0 24 24" style="width:1.2em;height:1.2em">
+    <ellipse cx="12" cy="6" rx="3" ry="2.5"/>
+    <ellipse cx="12" cy="14" rx="3.4" ry="3.8"/>
+    <path d="M8.6 14 Q4 12 2 8 M15.4 14 Q20 12 22 8
+             M9 5 Q6 3 5 1 M15 5 Q18 3 19 1"
+          stroke="currentColor" stroke-width="1.1" fill="none"/>
+    <circle cx="12" cy="21" r="1.8" fill="var(--moss)"/>
+  </svg>
+  Detailed derivations
+</h2>
 <ul>
   <li><a href="slides/derivations/navigation_fokker_planck.pdf">Fokker-Planck navigation</a></li>
   <li><a href="slides/derivations/soft_bang_bang.pdf">Soft bang-bang switching</a></li>
@@ -56,6 +121,8 @@
   <li><a href="slides/derivations/Navigation.pdf">Navigation notes</a></li>
   <li><a href="slides/derivations/HariPoster.pdf">Poster</a></li>
 </ul>
+
+<div class="footer">
+  S. Hari Preetham · Dynamics of Hierarchical Navigation Strategies
+</div>
 </body></html>
-
-
